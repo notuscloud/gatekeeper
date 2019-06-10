@@ -1,0 +1,14 @@
+---
+# Vault
+vault.transit.key: default
+
+# Elasticsearch
+elasticsearch.cluster.nodes: elasticsearch
+elasticsearch.cluster.name: elasticsearch
+
+# MariaDB
+mysql.host: mysql
+mysql.database: gatekeeper
+mysql.port: 3306
+spring.jpa.hibernate.ddl-auto: create
+spring.datasource.url: "jdbc:mysql://${mysql.host}:${mysql.port}/${mysql.database}"

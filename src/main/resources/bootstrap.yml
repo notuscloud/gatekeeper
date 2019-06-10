@@ -1,0 +1,25 @@
+---
+# Vault bootstrap properties
+vault.host: crypto
+vault.scheme: https
+vault.roleid:
+vault.secretid:
+#crypto.token:
+
+# Spring bootstrap configuration
+spring.application.name: gatekeeper
+spring.cloud.vault:
+  generic:
+    enabled: false
+  host: ${vault.host}
+  scheme: ${vault.scheme}
+  port: 443
+  authentication: APPROLE
+  app-role:
+    role-id: ${vault.roleid}
+    secret-id: ${vault.secretid}
+    app-role-path: approle/meetup
+  database:
+    enabled: true
+    role: meetup
+    backend: database/meetup
