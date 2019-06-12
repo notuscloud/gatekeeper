@@ -5,6 +5,7 @@ vault.transit.key: default
 # Elasticsearch
 elasticsearch.cluster.nodes: elasticsearch
 elasticsearch.cluster.name: elasticsearch
+elasticsearch.index.prefix: gatekeeper
 
 # MariaDB
 mysql.host: mysql

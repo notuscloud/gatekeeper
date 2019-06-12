@@ -8,6 +8,7 @@ import org.elasticsearch.client.RequestOptions;
 import org.elasticsearch.client.RestHighLevelClient;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Repository;
 
 import java.io.IOException;
@@ -19,8 +20,10 @@ public class DecryptRecordDao {
 
     private static final Logger LOG = LoggerFactory.getLogger(ElasticsearchConfiguration.class);
 
-    private final String INDEX = "meetup";
-    private final String TYPE = "decryptrecord";
+    @Value("${elasticsearch.index.prefix}")
+    private String INDEX;
+
+    private final String TYPE = "gatekeeper-log";
     private IndexResponse response;
 
     private RestHighLevelClient restHighLevelClient;
@@ -35,6 +38,7 @@ public class DecryptRecordDao {
     public String indexDecryptRecord(DecryptRecord decryptRecord){
 
         // Generate a UUID
+        decryptRecord.setTimestamp();
         decryptRecord.setId(UUID.randomUUID().toString());
         // Create a JSON objectMap from our class
         Map dataMap = objectMapper.convertValue(decryptRecord, Map.class);
