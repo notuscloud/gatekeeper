@@ -20,7 +20,7 @@
 	</properties>
 
 	<scm>
-		<developerConnection>scm:git:git://github.com/notuscloud/gatekeeper</developerConnection>
+		<developerConnection>scm:git:git@github.com/notuscloud/gatekeeper</developerConnection>
 	</scm>
 
 	<dependencies>
