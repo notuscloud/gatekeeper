@@ -1,6 +1,5 @@
 package fr.notuscloud.meetup.gatekeeper.secret;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.vault.authentication.SessionManager;
 import org.springframework.web.bind.annotation.*;
