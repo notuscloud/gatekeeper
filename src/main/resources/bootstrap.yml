@@ -2,6 +2,7 @@
 # Vault bootstrap properties
 vault.host: crypto
 vault.scheme: https
+vault.port: 443
 vault.roleid:
 vault.secretid:
 #crypto.token:
@@ -13,7 +14,7 @@ spring.cloud.vault:
     enabled: false
   host: ${vault.host}
   scheme: ${vault.scheme}
-  port: 443
+  port: ${vault.port}
   authentication: APPROLE
   app-role:
     role-id: ${vault.roleid}
