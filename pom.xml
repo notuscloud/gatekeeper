@@ -9,7 +9,7 @@
 	</parent>
 	<groupId>fr.notuscloud.meetup</groupId>
 	<artifactId>gatekeeper</artifactId>
-	<version>0.0.3-SNAPSHOT</version>
+	<version>0.0.3</version>
 	<name>Gatekeeper</name>
 	<packaging>war</packaging>
 	<description>Demo Meetup cybersecura Vault</description>
@@ -20,7 +20,7 @@
 
 	<scm>
 		<developerConnection>scm:git:git@github.com:notuscloud/gatekeeper.git</developerConnection>
-	  	<tag>v0.0.1</tag>
+	  	<tag>v0.0.3</tag>
     </scm>
 
 	<dependencies>
