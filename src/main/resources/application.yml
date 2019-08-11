@@ -3,6 +3,9 @@
 vault.transit.key: default
 
 # Elasticsearch
+# ES URI is "${elasticsearch.cluster.scheme}://${elasticsearch.cluster.nodes}:${elasticsearch.cluster.port}"
+elasticsearch.cluster.scheme: http
+elasticsearch.cluster.port: 9200
 elasticsearch.cluster.nodes: elasticsearch
 elasticsearch.cluster.name: elasticsearch
 elasticsearch.index.prefix: gatekeeper
